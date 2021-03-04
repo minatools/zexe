@@ -25,11 +25,11 @@ edition = "2018"
 algebra-core = { path = "../algebra-core", default-features = false }
 
 [dev-dependencies]
-rand = { version = "0.7", default-features = false }
+rand = { version = "0.8.3" } # "0.7.3"
 rand_xorshift = "0.2"
 
 [features]
-default = [ "std" ]
+default = [ "std", "parallel" ]
 
 full = [ "bls12_377", "bls12_381", "sw6", "mnt4_298", "mnt4_753", "mnt6_298", "mnt6_753", "edwards_bls12", "edwards_sw6", "jubjub", "tweedle", "pasta", "bn_382" ]
 

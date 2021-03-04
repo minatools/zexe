@@ -27,7 +27,7 @@ algebra-core = { path = "../algebra-core", default-features = false, features = 
 bench-utils = { path = "../bench-utils" }
 ff-fft = { path = "../ff-fft", default-features = false }
 r1cs-core = { path = "../r1cs-core", default-features = false }
-rand = { version = "0.7", default-features = false }
+rand = { version = "0.8.3" } #rand = "0.7"
 rayon = { version = "1", optional = true }
 
 [dev-dependencies]

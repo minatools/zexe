@@ -1,12 +1,12 @@
-load("@io_bazel_rules_rust//rust:rust.bzl", "rust_library")
+load("@rules_rust//rust:rust.bzl", "rust_library")
 
 rust_library(
+    name = "dpc",
     edition = "2018",
     visibility = ["//visibility:public"],
-    name = "dpc",
     srcs = glob(["src/**/*.rs"]),
     proc_macro_deps = [
-        "//bzl/cargo:derivative",
+        "//raze/cargo:derivative",
     ],
     aliases = {
         "//algebra:dpc": "algebra",
@@ -21,7 +21,7 @@ rust_library(
         "//gm17",
         "//bench-utils",
 
-        "//bzl/cargo:rand",
+        "//raze/cargo:rand",
     ],
     crate_features = [
         "bls12_377",

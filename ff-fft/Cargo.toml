@@ -21,7 +21,7 @@ edition = "2018"
 
 [dependencies]
 algebra-core = { path = "../algebra-core", default-features = false }
-rand = { version = "0.7", default-features = false }
+rand = { version = "0.8.3", default-features = false }
 rayon = { version = "1", optional = true }
 
 [dev-dependencies]

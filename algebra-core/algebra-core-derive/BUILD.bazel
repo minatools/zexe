@@ -1,5 +1,5 @@
 load(
-    "@io_bazel_rules_rust//rust:rust.bzl",
+    "@rules_rust//rust:rust.bzl",
     "rust_library",
 )
 
@@ -10,9 +10,12 @@ rust_library(
     edition = "2018",
     srcs = glob(["**/*.rs"]),
     deps = [
-        "//bzl/cargo:proc_macro2",
-        "//bzl/cargo:syn",
-        "//bzl/cargo:quote",
+        "//bzl/raze/cargo:proc_macro2",
+        "//bzl/raze/cargo:syn",
+        "//bzl/raze/cargo:quote",
+        # "//algebra-core/algebra-core-derive/cargo:proc_macro2",
+        # "//algebra-core/algebra-core-derive/cargo:syn",
+        # "//algebra-core/algebra-core-derive/cargo:quote",
     ],
 )
 

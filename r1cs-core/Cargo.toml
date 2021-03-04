@@ -20,7 +20,7 @@ license = "MIT/Apache-2.0"
 edition = "2018"
 
 [dependencies]
-algebra-core = { path = "../algebra-core", default-features = false }
+algebra-core = { path = "../algebra-core", features = ["parallel"] }
 smallvec = "1.1.0"
 
 [features]

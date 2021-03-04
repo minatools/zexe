@@ -1,17 +1,14 @@
-load(
-    "@io_bazel_rules_rust//rust:rust.bzl",
-    "rust_library",
-)
+load("@rules_rust//rust:rust.bzl", "rust_library")
 
 rust_library(
     name = "algebra",
     visibility = ["//visibility:public"],
     srcs = glob(["**/*.rs"]),
     proc_macro_deps = [
-        "//bzl/cargo:derivative",
+        "//bzl/raze/cargo:derivative",
     ],
     deps = [
-        "@zexe//algebra-core",
+        "//algebra-core",
     ],
     crate_features = [
         "tweedle",
@@ -23,20 +20,20 @@ rust_library(
     ],
 )
 
-rust_library(
-    name = "dpc",
-    visibility = ["//visibility:public"],
-    srcs = glob(["**/*.rs"]),
-    proc_macro_deps = [
-        "//bzl/cargo:derivative",
-    ],
-    deps = [
-        "@zexe//algebra-core",
-    ],
-    crate_features = [
-        "bls12_377",
-        "edwards_bls12",
-        "edwards_sw6",
-        "sw6",
-    ],
-)
+# rust_library(
+#     name = "dpc",
+#     visibility = ["//visibility:public"],
+#     srcs = glob(["**/*.rs"]),
+#     # proc_macro_deps = [
+#     #     "//bzl/raze/cargo:derivative",
+#     # ],
+#     deps = [
+#         "//algebra-core",
+#     ],
+#     crate_features = [
+#         "bls12_377",
+#         "edwards_bls12",
+#         "edwards_sw6",
+#         "sw6",
+#     ],
+# )

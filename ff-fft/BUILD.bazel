@@ -1,4 +1,4 @@
-load("@io_bazel_rules_rust//rust:rust.bzl", "rust_library")
+load("@rules_rust//rust:rust.bzl", "rust_library")
 
 rust_library(
     name = "ff-fft",
@@ -7,8 +7,8 @@ rust_library(
     srcs = glob(["src/**/*.rs"]),
     deps = [
         "//algebra-core",
-        "//bzl/cargo:rand",
-        "//bzl/cargo:rayon"
+        "//bzl/raze/cargo:rand",
+        "//bzl/raze/cargo:rayon"
     ],
     crate_features = [
         "std",

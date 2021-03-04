@@ -1,5 +1,5 @@
 load("@rules_cc//cc:defs.bzl", "cc_library")
-load("@io_bazel_rules_rust//rust:rust.bzl", "rust_library")
+load("@rules_rust//rust:rust.bzl", "rust_library")
 load("@//bzl/config/rust:BUILD.bzl", "RUST_CRATE_TYPE", "RUST_PROFILE_RELEASE")
 load("@obazl_rules_ocaml//ocaml:rules.bzl",
      "ocaml_archive",
@@ -153,11 +153,11 @@ rust_library(
         "@marlin//dlog/marlin:marlin_protocol_dlog",
         "@marlin//dlog/plonk:plonk_protocol_dlog",
 
-        "//bzl/cargo:libc",
-        "//bzl/cargo:rand",
-        "//bzl/cargo:rand_core",
-        "//bzl/cargo:num_bigint",
-        "//bzl/cargo:sprs",
-        "//bzl/cargo:rayon"
+        "//bzl/raze/cargo:libc",
+        "//bzl/raze/cargo:rand",
+        "//bzl/raze/cargo:rand_core",
+        "//bzl/raze/cargo:num_bigint",
+        "//bzl/raze/cargo:sprs",
+        "//bzl/raze/cargo:rayon"
     ],
 )

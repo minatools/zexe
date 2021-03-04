@@ -23,7 +23,7 @@ edition = "2018"
 ff-fft = { path = "../ff-fft" }
 algebra = { path = "../algebra", default-features = false, features = [ "bls12_381", "mnt6_753", "mnt4_753" ] }
 criterion = "0.3.1"
-rand = "0.7"
+rand = { version = "0.8.3" } # "0.7"
 
 [[bench]]
 name = "fft"

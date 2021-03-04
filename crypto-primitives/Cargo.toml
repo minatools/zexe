@@ -35,12 +35,12 @@ groth16 = { path = "../groth16", optional = true, default-features = false }
 r1cs-core = { path = "../r1cs-core", optional = true, default-features = false }
 r1cs-std = { path = "../r1cs-std", optional = true, default-features = false }
 
-rand = { version = "0.7", default-features = false }
+rand = { version = "0.8.3", default-features = false } #rand = "0.7"
 rayon = { version = "1.0", optional = true }
 derivative = { version = "2.0", features = ["use_core"] }
 
 [features]
-default = ["std"]
+default = ["std", "parallel"]
 r1cs = ["r1cs-core", "r1cs-std"]
 std = ["r1cs", "algebra-core/std", "r1cs-core/std", "r1cs-std/std"]
 parallel = ["std", "rayon", "gm17/parallel", "groth16/parallel", "ff-fft/parallel"]

@@ -29,7 +29,7 @@ crypto-primitives = { path = "../crypto-primitives", features = [ "gm17", "r1cs"
 gm17 = { path = "../gm17" }
 bench-utils = { path = "../bench-utils" }
 
-rand = { version = "0.7" }
+rand = { version = "0.8.3" } # "0.7"
 derivative = "2"
 
 [dev-dependencies]

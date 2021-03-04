@@ -27,7 +27,7 @@ r1cs-core = { path = "../r1cs-core", default-features = false }
 derivative = { version = "2", features = ["use_core"] }
 
 [dev-dependencies]
-rand = { version = "0.7", default-features = false }
+rand = { version = "0.8.3", default-features = false } # "0.7"
 rand_xorshift = { version = "0.2" }
 # Currently this means that all downstream users of `r1cs-std` will be using
 # `algebra` with the `bls12_381` feature.
