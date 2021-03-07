@@ -4,15 +4,15 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 ## WARNING: "The rules are under active development, as such the lastest commit on the main branch should be used."
 
-commitid = "2de6496df08b94e65a38a0fcafae9fff712862e2"
+rust_commitid = "2de6496df08b94e65a38a0fcafae9fff712862e2"
 
 http_archive(
     name = "rules_rust",
     sha256       = "e09656770684ae5f67951c05ad1a2b5561ca220d0bf1bad228712a71af02ce79",
-    strip_prefix = "rules_rust-" + commitid,
+    strip_prefix = "rules_rust-" + rust_commitid,
     urls = [
         # 2021-03-04:
-        "https://github.com/bazelbuild/rules_rust/archive/" + commitid + ".tar.gz",
+        "https://github.com/bazelbuild/rules_rust/archive/" + rust_commitid + ".tar.gz",
     ],
 )
 
